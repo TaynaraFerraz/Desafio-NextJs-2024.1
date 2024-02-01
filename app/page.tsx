@@ -10,9 +10,9 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className='min-h-screen bg-slate-100 '>
-    
-      <div className='flex flex-col lg:grid lg:grid-flow-col lg:grid-cols-6  mx-3 md:gap-0'>
+    <div className='min-h-screen '>
+
+      <div className='flex flex-col mt-8 lg:grid lg:grid-flow-col lg:grid-cols-6  mx-3 md:gap-0'>
         <div className='flex flex-col lg:col-span-4'>
           <Title title='Os melhores sorvetes você encontra aqui' subtitle='Não fique sem experimentar nossos sucessos de vendas' />
 
@@ -35,7 +35,7 @@ export default function Home() {
         <Title title='Conheça a Gran Gelato' subtitle='Nossas qualidades e mais informações sobre a empresa' />
       </div>
 
-      <div className=' flex flex-wrap justify-center gap-10'>
+      <div className=' flex flex-wrap justify-center gap-10 lg:gap-x-24'>
         <div className='mt-10'>
           <Cards src='/assets/cards/award.svg' text='Materiais de altíssima qualidade para desenvolver os produtos' />
         </div>
@@ -68,19 +68,20 @@ export default function Home() {
       </div>
 
 
-      <Title title='Principais vendas' subtitle='Não fique sem essas delícias no seu dia!!'/>
-      <div className='flex flex-wrap justify-center items-center lg:grid lg:grid-cols-3'>
-      <div className='mx-20 gap-24 '>
-        <Produtos src='/assets/carrossel/acai.jpeg' nome='Açaí' valor='R$ 16,00' />
-        <Produtos src='/assets/carrossel/picole.jpeg' nome='Açaí' valor='R$ 16,00' />
-        <Produtos src='/assets/carrossel/sorvete.jpeg' nome='Açaí' valor='R$ 16,00' />
-        <Produtos src='/assets/carrossel/sundae.jpeg' nome='Açaí' valor='R$ 16,00' />
-        <Produtos src='/assets/carrossel/milkshake.jpeg' nome='Açaí' valor='R$ 16,00' />
-        <Produtos src='/assets/carrossel/picole2.jpeg' nome='Açaí' valor='R$ 16,00' />
+      <Title title='Principais vendas' subtitle='Não fique sem essas delícias no seu dia!!' />
+      <div className='flex justify-center items-center mb-24'>
+      <div className='gap-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-32'>
+        
+          <Produtos src='/assets/carrossel/acai.jpeg' nome='Açaí' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/picole.jpeg' nome='Picolé' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/sorvete.jpeg' nome='Sorvete' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/sundae.jpeg' nome='Sundae' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/milkshake.jpeg' nome='Milkshake' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/picole2.jpeg' nome='Picolé recheado' valor='R$ 16,00' />
+        
       </div>
       </div>
-      
-      
+
     </div>
   )
 }

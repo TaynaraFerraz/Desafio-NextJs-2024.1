@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='w-1/1'>
+    <html lang="en" className='bg-slate-100 '>
       <body className={galdeano.className}>
       < NavBar />
       {children}

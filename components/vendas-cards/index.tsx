@@ -9,19 +9,19 @@ type produtosProps = {
 
 export default function Produtos({ nome, valor, src }: produtosProps) {
     return (
-        <div className=" mt-12 flex bg-sky-600 text-white rounded-lg hover:shadow-xl ">
+        <div className="w-[500px] mt-12 flex bg-sky-600 text-white rounded-lg hover:shadow-2xl ">
 
-            <div>
+            <div className="w-1/3 overflow-hidden rounded-l-lg">
                 <Image src={src}
                     alt="Imagem dos produtos em destaque"
-                    width={904}
-                    height={904}
-                    className="w-40 rounded-l-lg static"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
                 />
             </div>
 
             <div className=" flex flex-col justify-between mx-4 my-2">
-                <div className="">
+                <div className="flex flex-col gap-2">
                     <span className="text-3xl ">{nome}</span>
                     <div className="flex gap-4">
                         <Star className="text-2xl text-yellow-500" />

@@ -13,7 +13,7 @@ const imagens = [
 
 export default function Footer() {
     return (
-        <div className="bg-yellow-400 flex items-center">
+        <footer className="bg-yellow-400 flex items-center">
 
             <div className=" w-1/2 md:w-1/6 m-4 ">
                 <Link href={'/'} className="grid grid-cols-4">
@@ -45,6 +45,6 @@ export default function Footer() {
                     className="w-24 h-24 "
                 />
             </div>
-        </div>
+        </footer>
     )
 }
