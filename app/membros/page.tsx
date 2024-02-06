@@ -1,4 +1,5 @@
 import Pesquisa from "@/components/search";
+import SecundaryTitle from "@/components/title-secundary";
 
 
 export default function Page() {
@@ -11,9 +12,10 @@ export default function Page() {
             </div>
 
             <div className="flex items-center justify-center mt-16">
-                <div className=" w-11/12">
-                    <h1 className="text-3xl text-sky-700 uppercase md:text-4xl lg:text-5xl ">Membros da empresa</h1>
+                <div className="w-11/12">
+                    <SecundaryTitle text="Membros da empresa" />
                 </div>
+                
             </div>
 
 
