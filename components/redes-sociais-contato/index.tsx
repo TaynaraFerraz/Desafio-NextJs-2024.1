@@ -17,7 +17,7 @@ export default function RedesSociais() {
                     <Link href={'/'} className=" ">
                         {imagens.map((imagens, index) =>
                             <Image src={imagens.src} alt={imagens.alt} width={imagens.width} height={imagens.width}
-                                className="my-20"
+                                className="my-20 w-10"
                             >
                             </Image>
                         )}
