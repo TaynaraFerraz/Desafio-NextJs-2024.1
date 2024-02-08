@@ -73,11 +73,11 @@ export default function Home() {
       <div className='gap-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-32'>
         
           <Produtos src='/assets/carrossel/acai.jpeg' nome='Açaí' valor='R$ 16,00' />
-          <Produtos src='/assets/carrossel/picole.jpeg' nome='Picolé' valor='R$ 16,00' />
-          <Produtos src='/assets/carrossel/sorvete.jpeg' nome='Sorvete' valor='R$ 16,00' />
-          <Produtos src='/assets/carrossel/sundae.jpeg' nome='Sundae' valor='R$ 16,00' />
-          <Produtos src='/assets/carrossel/milkshake.jpeg' nome='Milkshake' valor='R$ 16,00' />
-          <Produtos src='/assets/carrossel/picole2.jpeg' nome='Picolé recheado' valor='R$ 16,00' />
+          <Produtos src='/assets/carrossel/picole.jpeg' nome='Picolé' valor='R$ 4,50' />
+          <Produtos src='/assets/carrossel/sorvete.jpeg' nome='Sorvete' valor='R$ 5,50' />
+          <Produtos src='/assets/carrossel/sundae.jpeg' nome='Sundae' valor='R$ 5,50' />
+          <Produtos src='/assets/carrossel/milkshake.jpeg' nome='Milkshake' valor='R$ 15,00' />
+          <Produtos src='/assets/carrossel/picole2.jpeg' nome='Picolé recheado' valor='R$ 7,00' />
         
       </div>
       </div>
