@@ -14,8 +14,8 @@ const links = [
 ]
 
 export default function NavBar() {
-    const [isNavOpen, setIsNavOpen] = useState(false)
-    const alternaIcone =() => setIsNavOpen(!isNavOpen)
+    const [navegacao, setNavegacao] = useState(false)
+    const alternaIcone =() => setNavegacao(!navegacao)
 
 
    return (
@@ -45,7 +45,7 @@ export default function NavBar() {
                     </div>
 
                     <div className="md:hidden">
-                        {isNavOpen ?
+                        {navegacao ?
                           <X 
                           onClick={alternaIcone}
                           className="w-12 h-12 cursor-pointer"
@@ -62,7 +62,7 @@ export default function NavBar() {
                         }
                     </div>
                 </nav>
-                {isNavOpen &&
+                {navegacao &&
                 <div className="md:hidden gap-3 grid grid-cols-2 basis-full pt-4 ">
                     {links.map((link, index)=>
                             <Link href={link.href}>

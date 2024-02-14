@@ -47,7 +47,7 @@ export default function Page() {
                                     
                                         <td className="px-6 py-4">
                                             <Link href={'/manage/view'} className="bg-sky-600 text-white px-12 py-3 rounded-xl">
-                                                Vizualizar
+                                                Visualizar
                                             </Link>
                                         </td>
                                         <td className="px-6 py-4">

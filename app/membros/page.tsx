@@ -1,8 +1,14 @@
+"use server"
+
+import { fetchDados } from "@/actions/dados-pessoais/action";
 import Pesquisa from "@/components/search";
 import SecundaryTitle from "@/components/title-secundary";
+import { Membro } from "@prisma/client";
 
 
-export default function Page() {
+
+export default async function Page({dados}:{dados: Membro[]}){
+    const dado = fetchDados;
     return (
         <div className="min-h-screen">
 
@@ -24,7 +30,7 @@ export default function Page() {
                     <table className="w-full text-xl text-left">
                         <thead className="text-xl uppercase bg-stone-200">
                             <tr>
-                                <th scope="col" className="px-6 py-3">
+                                <th scope="col" className="w-2/3 px-6 py-3">
                                     Nome
                                 </th>
                                 <th scope="col" className="px-6 py-3">
@@ -36,29 +42,20 @@ export default function Page() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="bg-white border-b hover:bg-amber-100 ">
-                                <th scope="row" className="px-6 py-4 ">
-                                    Áurea cunha Prado
-                                </th>
-                                <td className="px-6 py-4">
-                                    Assessor
-                                </td>
-                                <td className="px-6 py-4">
-                                    aurea.prado@codejr.com.br
-                                </td>
-                            </tr>
-                            <tr className="bg-white border-b hover:bg-amber-100 ">
-                                <th scope="row" className="px-6 py-4 ">
-                                    Breno Furtado Rosado
-                                </th>
-                                <td className="px-6 py-4">
-                                    Assessor
-                                </td>
-                                <td className="px-6 py-4">
-                                    breno.furtado@codejr.com.br
-                                </td>
-                            </tr>
-
+                            {dados?.map((dado, index)=>(
+                                    <tr className="bg-white border-b hover:bg-amber-100 ">
+                                    <th scope="row" className="px-6 py-4 ">
+                                        {dado.name} 
+                                    </th>
+                                    <td className="px-6 py-4">
+                                        {dado.cargo}
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        {dado.email}
+                                    </td>
+                                </tr>
+                            ))}
+                            
                         </tbody>
                     </table>
                 </div>
