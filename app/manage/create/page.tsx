@@ -1,3 +1,4 @@
+import { criarMembro } from "@/actions/dados-pessoais/action";
 import SecundaryTitle from "@/components/title-secundary";
 
 export default function View() {
@@ -12,11 +13,12 @@ export default function View() {
                 </div>
 
                 <div className="flex items-center justify-center ">
-                    <form className="flex flex-col mt-24 ">
+                    <form className="flex flex-col mt-24 " action={criarMembro}>
                         <label className="text-3xl">Nome:</label>
 
                         <input type="text"
                             className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            name="name" required
                         >
                         </input>
 
@@ -24,6 +26,7 @@ export default function View() {
 
                         <input type="text"
                             className="bg-white border-2 w-64 md:w-[520px] h-10 rounded-xl outline-none text-2xl p-4"
+                            name="cargo" required
                         >
                         </input>
 
@@ -31,6 +34,7 @@ export default function View() {
 
                         <input type="text"
                             className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            name="email" required
                         >
                         </input>
 

@@ -1,3 +1,5 @@
+"use server"
+
 import { fetchDados } from "@/actions/dados-pessoais/action";
 import PagMembros from "@/components/pag-membros";
 

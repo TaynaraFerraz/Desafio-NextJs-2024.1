@@ -1,10 +1,12 @@
+'use server'
+
 import { Membro } from "@prisma/client";
 import Pesquisa from "../search";
 import SecundaryTitle from "../title-secundary";
 
 
 
-export default function PagMembros({dados}:{dados: Membro[]}){
+export default async function PagMembros({dados}:{dados: Membro[]}){
    
     return (
         <div className="min-h-screen">
@@ -39,7 +41,7 @@ export default function PagMembros({dados}:{dados: Membro[]}){
                             </tr>
                         </thead>
                         <tbody>
-                            {dados?.map((dados, index)=>(
+                            {dados.map((dados, index)=>(
 
                                     <tr className="bg-white border-b hover:bg-amber-100 ">
                                     <th scope="row" className="px-6 py-4 xl:text-2xl ">

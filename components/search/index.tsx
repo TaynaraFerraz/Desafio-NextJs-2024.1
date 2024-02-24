@@ -37,7 +37,7 @@ export default function Pesquisa() {
                 
                 <div className="flex bg-zinc-200 rounded-xl ">
                     <input type="text" id="search" placeholder="Procure um membro"
-                    className="h-[46px] text-black text-xl w-full bg-zinc-200 p-4 rounded-xl outline-none"
+                    className="h-[50px] text-black text-xl w-full bg-zinc-200 p-4 rounded-xl outline-none"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     ></input>

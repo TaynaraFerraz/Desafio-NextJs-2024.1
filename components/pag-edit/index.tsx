@@ -1,7 +1,11 @@
-import SecundaryTitle from "@/components/title-secundary";
+import { Membro } from "@prisma/client";
+import SecundaryTitle from "../title-secundary";
+import { EditMembro } from "@/actions/dados-pessoais/action";
 
-export default function View() {
-    return (
+
+export default function PagEdit({dadosAtualizar}:{dadosAtualizar: Membro}){
+    const updateMembro = EditMembro.bind(null, dadosAtualizar.id)
+    return(
         <div className="min-h-screen flex items-center justify-center ">
             <div className="bg-white xl:w-2/5 p-8 m-6 border-4 rounded-lg">
             
@@ -12,11 +16,13 @@ export default function View() {
                 </div>
 
                 <div className="flex items-center justify-center ">
-                    <form className="flex flex-col mt-24 ">
+                    <form className="flex flex-col mt-24 " action={updateMembro}>
                         <label className="text-3xl">Nome:</label>
 
                         <input type="text"
                             className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            name="name"
+                            defaultValue={dadosAtualizar.name}
                         >
                         </input>
 
@@ -24,6 +30,8 @@ export default function View() {
 
                         <input type="text"
                             className="bg-white border-2 w-64 md:w-[520px] h-10 rounded-xl outline-none text-2xl p-4"
+                            name="cargo"
+                            defaultValue={dadosAtualizar.cargo}
                         >
                         </input>
 
@@ -31,6 +39,8 @@ export default function View() {
 
                         <input type="text"
                             className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            name="email"
+                            defaultValue={dadosAtualizar.email}
                         >
                         </input>
 
@@ -42,4 +52,4 @@ export default function View() {
             </div>
         </div>
     )
-} 
+}

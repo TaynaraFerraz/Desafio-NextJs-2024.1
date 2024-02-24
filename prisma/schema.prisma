@@ -12,7 +12,7 @@ datasource db {
 
 model Membro {
   id        Int     @id @default(autoincrement())
-  name      String
+  name      String  
   cargo     String
   email     String
   published Boolean
