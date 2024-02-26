@@ -1,13 +1,12 @@
 'use client'
 
-import { deletarMembro } from "@/actions/dados-pessoais/action";
+import Link from "next/link"
 
 
-
-export default function DeleteButton({id}:{id: number}) {
+export default function DeleteButton({id}:{id: number | undefined}) {
     return (
-        <button onClick={() => deletarMembro(id)} className="bg-sky-600 text-white px-8 md:px-16 py-2 rounded-xl">
+        <Link href={`/manage/delete/${id}`}  className="bg-sky-600 text-white px-8 md:px-16 py-3 rounded-xl">
             Excluir
-        </button>
+        </Link>
     )
 }

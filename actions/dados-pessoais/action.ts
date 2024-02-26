@@ -1,6 +1,7 @@
 "use server"
 
 import prisma from "@/lib/db"
+import { Membro } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -14,7 +15,8 @@ export async function fetchDados(){
             id: true,
             name: true,
             cargo: true,
-            email: true
+            email: true,
+            published:true
        },
        
     })
@@ -22,7 +24,7 @@ export async function fetchDados(){
     return dados;
 }
 
-export async function deletarMembro(id: number | undefined){
+export async function deletarMembro(id: number){
     await prisma.membro.delete({
         where: {id},
     });
@@ -79,3 +81,18 @@ export async function EditMembro(id:number, formData: FormData){
 
     redirect("/manage")
 }
+
+export async function VerificaNomeEmail(name: string, email: string, formData:FormData){
+    const nome = formData.get("name") as string;
+    const newemail = formData.get("email") as string;
+
+    const result = await prisma.membro.count({
+        where:{
+            name : nome,
+            email : newemail
+        }
+    })
+
+   return result;
+}
+

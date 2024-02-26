@@ -19,7 +19,7 @@ export default async function ManageView({dadosAtualizar}:{dadosAtualizar:Membro
                         <label className="text-3xl">Nome:</label>
                             
                         <input type="text"
-                            className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4 mt-2"
                             name="name"
                             defaultValue={dadosAtualizar.name}
                         >
@@ -28,7 +28,7 @@ export default async function ManageView({dadosAtualizar}:{dadosAtualizar:Membro
                         <label className="text-3xl mt-8">Cargo:</label>
                             
                         <input type="text"
-                            className="bg-white border-2 w-64 sm:w-[520px] h-10 rounded-xl outline-none text-2xl p-4"
+                            className="bg-white border-2 w-64 sm:w-[520px] h-10 rounded-xl outline-none text-2xl p-4 mt-2"
                             name="cargo"
                             defaultValue={dadosAtualizar.cargo}
                         >
@@ -37,7 +37,7 @@ export default async function ManageView({dadosAtualizar}:{dadosAtualizar:Membro
                         <label className="text-3xl mt-8">Email:</label>
                             
                         <input type="text"
-                            className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4"
+                            className="bg-white border-2 w-full h-10 rounded-xl outline-none text-2xl p-4 mt-2"
                             name="email"
                             defaultValue={dadosAtualizar.email}
                         >

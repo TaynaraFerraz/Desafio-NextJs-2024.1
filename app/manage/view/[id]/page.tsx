@@ -1,3 +1,5 @@
+"use server"
+
 import {  fetchDadosById } from "@/actions/dados-pessoais/action";
 import ManageView from "@/components/manage-view";
 
