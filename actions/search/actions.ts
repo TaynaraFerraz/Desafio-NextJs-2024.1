@@ -1,4 +1,5 @@
 import prisma from "@/lib/db";
+import { redirect } from "next/dist/server/api-utils";
 
 export async function fetchBuscaMembros(query:string){
  
@@ -7,10 +8,8 @@ export async function fetchBuscaMembros(query:string){
             OR: [{ name:{contains: query, mode:"insensitive"}}],
         },
         
-        orderBy:{
-            name: 'asc',
-        }
     })
 
+    
     return membros;
 }

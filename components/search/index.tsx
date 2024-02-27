@@ -18,10 +18,10 @@ export default function Pesquisa() {
 
         const params=new URLSearchParams();
         params.set('query', query)
-        router.push(`/membros/search/?${params.toString()}`)
+        router.push(`/membros/?${params.toString()}`)
     }
 
-    const input = (e: React.FormEvent<HTMLFormElement>)=>{
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         handleSearch(searchTerm)
     }
@@ -33,12 +33,11 @@ export default function Pesquisa() {
    
     return (
         <div className="w-11/12">
-            <form onSubmit={input} className="" autoComplete="off">
+            <form onSubmit={handleSubmit} className="" autoComplete="off">
                 
                 <div className="flex bg-zinc-200 rounded-xl ">
                     <input type="text" id="search" placeholder="Procure um membro"
                     className="h-[50px] text-black text-xl w-full bg-zinc-200 p-4 rounded-xl outline-none"
-                    value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     ></input>
 

@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 
 const imagens = [
-    { src: '/assets/footer/facebook.png', alt: "logo do facebook ", width: 30 },
-    { src: '/assets/footer/whatsapp.png', alt: "logo do whatsapp ", width: 30 },
-    { src: '/assets/footer/instagram.png', alt: "logo instagram ", width: 30 },
-    { src: '/assets/footer/tiktok.png', alt: "logo do tiktok ", width: 30 }
+    { src: '/assets/footer/facebook.png', alt: "logo do facebook ", width: 30, href: '/' },
+    { src: '/assets/footer/whatsapp.png', alt: "logo do whatsapp ", width: 30, href: '/'  },
+    { src: '/assets/footer/instagram.png', alt: "logo instagram ", width: 30, href: '/'  },
+    { src: '/assets/footer/tiktok.png', alt: "logo do tiktok ", width: 30, href: '/'  }
 ]
 
 export default function Footer() {
@@ -16,15 +16,18 @@ export default function Footer() {
         <footer className="bg-yellow-400 flex items-center">
 
             <div className=" w-1/2 md:w-1/6 m-4 ">
-                <Link href={'/'} className="grid grid-cols-4">
-                    {imagens.map((imagens, index) =>
+                <div className="flex">
+                {imagens.map((imagens, index) =>
+                    <Link href={imagens.href} >
                         <Image src={imagens.src} alt={imagens.alt} width={imagens.width} height={imagens.width}
                             className="m-3"
                         >
                         </Image>
+                    </Link>
                     )}
-                </Link>
-
+                
+                </div>
+                   
                 <span className=" flex gap-4 m-3 md:text-xl ">
                     <Phone />
                     (32) 99857-5521

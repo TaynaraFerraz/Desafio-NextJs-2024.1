@@ -18,7 +18,7 @@ export default async function PagManage({ dados }: { dados: Membro[] }) {
                 <div className="w-11/12 flex flex-col md:flex-row md:justify-between mt-16">
                     <SecundaryTitle text="Gerenciamento de membros" />
                     <Link href={'/manage/create'}
-                        className="bg-green-500 w-64 text-white flex items-center justify-center px-5 py-4 text-2xl rounded-xl"
+                        className="bg-green-500 w-56 md:w-64 text-white flex items-center justify-center px-5 py-4 text-xl md:text-2xl rounded-xl"
                     >
                         +Criar novo membro
                     </Link>

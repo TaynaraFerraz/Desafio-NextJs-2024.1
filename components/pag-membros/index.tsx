@@ -3,24 +3,26 @@
 import { Membro } from "@prisma/client";
 import Pesquisa from "../search";
 import SecundaryTitle from "../title-secundary";
+import DadosMembro from "../dados-membro";
 
 
 
-export default async function PagMembros({dados}:{dados: Membro[]}){
-   
+export default async function PagMembros({ busca }: { busca: Membro[] }) {
+
     return (
         <div className="min-h-screen">
-
+             
             <div className="flex items-center justify-center mt-12">
                 <Pesquisa />
 
             </div>
 
+            
             <div className="flex items-center justify-center mt-16">
                 <div className="w-11/12">
                     <SecundaryTitle text="Membros da empresa" />
                 </div>
-                
+
             </div>
 
 
@@ -41,22 +43,12 @@ export default async function PagMembros({dados}:{dados: Membro[]}){
                             </tr>
                         </thead>
                         <tbody>
-                            {dados.map((dados, index)=>(
+                            {busca.map((busca, index) => (
 
-                                    <tr className="bg-white border-b hover:bg-amber-100 ">
-                                    <th scope="row" className="px-6 py-4 xl:text-2xl ">
-                                         {dados.name}
-                                    </th>
-                                    <td className="px-6 py-4 xl:text-2xl">
-                                        {dados.cargo}
-                                    </td>
-                                    <td className="px-6 py-4 xl:text-2xl">
-                                        {dados.email}
-                                    </td>
-                                </tr>
-                            
+                                <DadosMembro busca={busca} />
+
                             ))}
-                            
+
                         </tbody>
                     </table>
                 </div>
