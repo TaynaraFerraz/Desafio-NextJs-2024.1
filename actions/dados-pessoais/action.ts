@@ -24,12 +24,11 @@ export async function fetchDados(){
     return dados;
 }
 
-export async function deletarMembro(id: number | undefined){
+export async function deletarMembro(id: number ){
     await prisma.membro.delete({
         where: {id},
     });
 
-    
 }
 
 export async function criarMembro(formData:FormData) {
