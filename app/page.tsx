@@ -1,6 +1,7 @@
 'use client'
 
 import Cards from '@/components/cards'
+import Footer from '@/components/footer'
 import NavBar from '@/components/navbar'
 import Carrossel from '@/components/swiper'
 import Text from '@/components/text'
@@ -13,14 +14,14 @@ export default function Home() {
     <div className='min-h-screen '>
 
       <div className='flex flex-col mt-8 lg:grid lg:grid-flow-col lg:grid-cols-6  mx-3 md:gap-0'>
-        <div className='flex flex-col lg:col-span-4'>
+        <div className='flex flex-col gap-6 lg:col-span-4'>
           <Title title='Os melhores sorvetes você encontra aqui' subtitle='Não fique sem experimentar nossos sucessos de vendas' />
 
           <Text text='Somos uma equipe especializada a mais de 15 anos na produção de sorvetes e nossa maior felicidade é ver o sorrisso no rosto de nossos clientes ao provar nossas criações.
           Contamos com um cardápio diverso de produtos, como sorvetes e picolés de sabores variados, açaí com diversos acompanhamentos, milkshae, sundae, sorvete na casquinha, picolés recheados e mais uma infinidade de delícias geladas.'
           />
 
-          <p className='mt-6 text-2xl text-amber-500 md:text-3xl md:px-16 lg:text-4xl'>Venha conhecer nossa loja e experimentar nossos deliciosos produtos!</p>
+          <p className='text-2xl text-amber-500 md:text-3xl md:px-16 lg:text-4xl'>Venha conhecer nossa loja e experimentar nossos deliciosos produtos!</p>
         </div>
 
         <div className='flex lg:col-span-2 relative group items-center justify-center'>

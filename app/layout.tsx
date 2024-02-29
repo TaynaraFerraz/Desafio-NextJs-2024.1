@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='bg-slate-100 '>
       <body className={galdeano.className}>
-      < NavBar />
+     <NavBar />
       {children}
       <Footer />
       </body>

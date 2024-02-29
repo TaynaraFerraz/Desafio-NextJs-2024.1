@@ -29,6 +29,7 @@ export async function deletarMembro(id: number ){
         where: {id},
     });
 
+    revalidatePath('/manage')
 }
 
 export async function criarMembro(formData:FormData) {
@@ -45,7 +46,8 @@ export async function criarMembro(formData:FormData) {
             email,
             published
         }
-    })
+    }); 
+
 
     redirect("/manage")
 }
@@ -81,14 +83,12 @@ export async function EditMembro(id:number, formData: FormData){
     redirect("/manage")
 }
 
-export async function VerificaNomeEmail(name: string, email: string, formData:FormData){
+export async function VerificaNome(name: string, formData:FormData){
     const nome = formData.get("name") as string;
-    const newemail = formData.get("email") as string;
-
+   
     const result = await prisma.membro.count({
         where:{
-            name : nome,
-            email : newemail
+            name : nome
         }
     })
 

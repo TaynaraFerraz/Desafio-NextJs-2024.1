@@ -8,6 +8,7 @@ import { redirect } from "next/dist/server/api-utils";
 
 export default function CardModal({ isOpen, setCloseModal, id }: { isOpen: boolean, setCloseModal:boolean, id:number }) {
 
+    
     if (isOpen) {
         return (
             <div className="fixed inset-x-0 inset-y-0 bg-[rgb(0,0,0,0.7)] z-50 ">

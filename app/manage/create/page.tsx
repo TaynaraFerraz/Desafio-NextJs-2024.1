@@ -1,6 +1,6 @@
 "use server"
 
-import { VerificaNomeEmail, criarMembro } from "@/actions/dados-pessoais/action";
+import {  criarMembro } from "@/actions/dados-pessoais/action";
 import SecundaryTitle from "@/components/title-secundary";
 
 export default async function Page() {
