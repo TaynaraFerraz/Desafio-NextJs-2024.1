@@ -23,10 +23,10 @@ export default function RedesSociais() {
                         )}
                     </Link>
                     <div className="flex flex-col my-20 gap-20">
-                        <span className="text-3xl">Gran Gelato Sorveteria</span>
-                        <span className="text-3xl ">(32) 99857-5521</span>
-                        <span className="text-3xl">@gran.gelato</span>
-                        <span className="text-3xl">Gran Gelato Sorveteria</span>
+                        <span className="text-xl md:text-3xl">Gran Gelato Sorveteria</span>
+                        <span className="text-xl md:text-3xl ">(32) 99857-5521</span>
+                        <span className="text-xl md:text-3xl">@gran.gelato</span>
+                        <span className="text-xl md:text-3xl">Gran Gelato Sorveteria</span>
                     </div>
 
 

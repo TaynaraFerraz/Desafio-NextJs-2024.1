@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='mt-20'>
+      <div className='mt-20 mx-3'>
         <Title title='Conheça a Gran Gelato' subtitle='Nossas qualidades e mais informações sobre a empresa' />
       </div>
 
@@ -58,8 +58,8 @@ export default function Home() {
 
 
       <div className='flex flex-col lg:grid lg:grid-flow-col lg:grid-cols-6  mt-24 mx-3 md:gap-0 '>
-        <div className='flex flex-col lg:col-span-4'>
-          <Title title='Nossos Produtos' subtitle='Sensações com sabores incríveis' />
+        <div className='flex flex-col lg:col-span-4 '>
+          <Title title='Nossos Produtos' subtitle='Sensações com sabores incríveis'/>
 
           <Text text='Na Gran Gelato, a criação e implementação de um novo produto passa por uma complexa fase de pesquisa ao consumidor, análise no mercado e dedicação máxima de toda equipe na sua formulação até chegar ao cliente.
           Os sorvetes Gran Gelato são receitas exclusivas feitas artesanalmente com excelentes matérias-primas, muito carinho, sabor inigualável e diferente de tudo que você já experimentou. Desenvolvidos com alta qualidade, nossos produtos possuem destaque na região e conquista o paladar de todos que os provam. ' />
@@ -68,8 +68,9 @@ export default function Home() {
         <Carrossel />
       </div>
 
-
-      <Title title='Principais vendas' subtitle='Não fique sem essas delícias no seu dia!!' />
+      <div className='mx-3'>
+        <Title title='Principais vendas' subtitle='Não fique sem essas delícias no seu dia!!' />
+      </div>
       <div className='flex justify-center items-center mb-24'>
       <div className='gap-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-32'>
         

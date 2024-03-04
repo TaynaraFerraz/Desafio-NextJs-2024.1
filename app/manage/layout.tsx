@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Galdeano } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import NavBar from '@/components/navbar'
 import Footer from '@/components/footer'
 

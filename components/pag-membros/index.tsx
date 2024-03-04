@@ -14,7 +14,6 @@ export default async function PagMembros({ busca }: { busca: Membro[] }) {
              
             <div className="flex items-center justify-center mt-12">
                 <Pesquisa />
-
             </div>
 
             

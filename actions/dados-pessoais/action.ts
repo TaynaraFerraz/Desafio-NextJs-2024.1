@@ -38,7 +38,7 @@ export async function criarMembro(formData:FormData) {
     const email = formData.get("email") as string;
 
     const published = true;
-
+    
     await prisma.membro.create({
         data:{
             name,
@@ -51,6 +51,8 @@ export async function criarMembro(formData:FormData) {
 
     redirect("/manage")
 }
+
+
 
 export async function fetchDadosById(id:number){
     const dados = await prisma.membro.findUnique({
@@ -83,15 +85,4 @@ export async function EditMembro(id:number, formData: FormData){
     redirect("/manage")
 }
 
-export async function VerificaNome(name: string, formData:FormData){
-    const nome = formData.get("name") as string;
-   
-    const result = await prisma.membro.count({
-        where:{
-            name : nome
-        }
-    })
-
-   return result;
-}
 

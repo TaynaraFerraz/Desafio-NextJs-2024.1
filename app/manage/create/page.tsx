@@ -1,10 +1,10 @@
 "use server"
 
-import {  criarMembro } from "@/actions/dados-pessoais/action";
+import {  criarMembro} from "@/actions/dados-pessoais/action";
 import SecundaryTitle from "@/components/title-secundary";
 
 export default async function Page() {
-
+    
     return (
         <div className="min-h-screen flex items-center justify-center ">
             <div className="bg-white xl:w-2/5 p-8 m-6 border-4 rounded-lg">
@@ -16,7 +16,8 @@ export default async function Page() {
                 </div>
 
                 <div className="flex items-center justify-center ">
-                    <form className="flex flex-col mt-24 " action={criarMembro}>
+                    <form className="flex flex-col mt-24 " action={criarMembro} id="form-id">
+                        
                         <label className="text-3xl">Nome:</label>
 
                         <input type="text"
@@ -42,13 +43,15 @@ export default async function Page() {
                         </input>
 
                         <div className="flex items-center justify-center">
-                            <button className="w-1/2 text-2xl bg-green-500 mt-24 py-2 rounded-xl hover:bg-green-400"  >
+                            <button className="w-1/2 text-2xl bg-green-500 mt-24 py-2 rounded-xl hover:bg-green-400">
                                 Salvar
                             </button>
                         </div>
+                       
                     </form>
                 </div>
             </div>
         </div>
     )
+
 } 

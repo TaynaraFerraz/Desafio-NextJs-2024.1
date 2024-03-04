@@ -9,7 +9,7 @@ type produtosProps = {
 
 export default function Produtos({ nome, valor, src }: produtosProps) {
     return (
-        <div className="w-[500px] mt-12 flex bg-sky-600 text-white rounded-lg hover:shadow-2xl ">
+        <div className=" w-[318px] md:w-[500px] mt-12 flex bg-sky-600 text-white rounded-lg hover:shadow-2xl ">
 
             <div className="w-1/3 overflow-hidden rounded-l-lg">
                 <Image src={src}

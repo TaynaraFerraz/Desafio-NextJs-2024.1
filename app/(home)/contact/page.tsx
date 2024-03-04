@@ -6,7 +6,7 @@ import Title from "@/components/title";
 
 export default function Page(){
     return(
-        <div className="min-h-screen mt-10">
+        <div className="min-h-screen mt-10 mx-3">
          <Title title="Sobre nós" subtitle="Conheça um pouco mais sobre nossa história e nossos métodos de contato" />
 
             <div className="mt-8">

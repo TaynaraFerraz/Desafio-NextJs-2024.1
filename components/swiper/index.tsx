@@ -19,7 +19,7 @@ const imagens = [
 export default function Carrossel() {
     return (
         <div className="flex lg:col-span-2 relative group items-center justify-center rounded-full">
-            <div className="w-1/2 md:w-8/12 lg:w-full rounded-full">
+            <div className="w-full sm:w-7/12 lg:w-full rounded-full">
                 <Swiper
                     slidesPerView={1}
                     pagination={{ clickable: true }}
